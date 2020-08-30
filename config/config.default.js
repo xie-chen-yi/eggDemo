@@ -22,6 +22,18 @@ module.exports = appInfo => {
   const userConfig = {
     // myAppName: 'egg',
   };
+  userConfig.security = {
+    csrf: false,
+  };
+  userConfig.mysql = {
+    client: {
+      host: 'localhost',
+      port: '3306',
+      user: 'root',
+      password: 'root',
+      database: 'cms',
+    },
+  };
 
   return {
     ...config,
